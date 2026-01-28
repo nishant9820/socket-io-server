@@ -8,13 +8,20 @@
   "license": "ISC",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --coverage",
     "dev": "nodemon index.js"
   },
   "dependencies": {
     "socket.io": "^4.7.4"
   },
   "devDependencies": {
+    "jest": "^29.7.0",
     "nodemon": "^3.1.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "coverageReporters": ["lcov", "text"],
+    "extensionsToTreatAsEsm": [".js"]
   }
 }
